@@ -27,23 +27,23 @@
   --shadow-color: rgba(0, 0, 0, 0.4);
 }
 
-/* Light Mode Variables - Warm Cream/Blue Theme */
+/* Light Mode Variables - Modern Warm Theme */
 .light {
-  --bg-primary: #fefdfb;
-  --bg-secondary: #f8f6f3;
+  --bg-primary: #fdfcfb;
+  --bg-secondary: #f9f7f4;
   --bg-card: #ffffff;
-  --text-primary: #2d3748;
-  --text-secondary: #4a5568;
-  --text-muted: #718096;
-  --accent-primary: #3182ce;
-  --accent-secondary: #805ad5;
-  --accent-tertiary: #319795;
+  --text-primary: #1e293b;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+  --accent-primary: #4f46e5;
+  --accent-secondary: #7c3aed;
+  --accent-tertiary: #06b6d4;
   --border-color: #e2e8f0;
-  --hover-bg: #f7fafc;
+  --hover-bg: #f8fafc;
   --card-bg: #ffffff;
   --darker-bg: #f1f5f9;
   --input-bg: #ffffff;
-  --shadow-color: rgba(0, 0, 0, 0.1);
+  --shadow-color: rgba(0, 0, 0, 0.08);
 }
 
 * {
@@ -145,7 +145,7 @@ body {
 /* Clean Hero Section */
 .hero-section-clean {
   min-height: 100vh;
-  background: linear-gradient(135deg, #fefdfb 0%, #f8f6f3 30%, #f0f4f8 70%, #e6f3ff 100%);
+  background: linear-gradient(135deg, #fdfcfb 0%, #f9f7f4 30%, #f0f9ff 70%, #eff6ff 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -344,21 +344,21 @@ body {
 }
 
 .skill-blue {
-  background: linear-gradient(45deg, rgba(59, 130, 246, 0.1), rgba(29, 78, 216, 0.1));
-  border-color: #3b82f6;
-  color: #1d4ed8;
+  background: linear-gradient(45deg, rgba(79, 70, 229, 0.1), rgba(59, 130, 246, 0.1));
+  border-color: #4f46e5;
+  color: #3730a3;
 }
 
 .skill-purple {
-  background: linear-gradient(45deg, rgba(139, 92, 246, 0.1), rgba(124, 58, 237, 0.1));
-  border-color: #8b5cf6;
-  color: #7c3aed;
+  background: linear-gradient(45deg, rgba(124, 58, 237, 0.1), rgba(139, 92, 246, 0.1));
+  border-color: #7c3aed;
+  color: #5b21b6;
 }
 
 .skill-pink {
   background: linear-gradient(45deg, rgba(236, 72, 153, 0.1), rgba(219, 39, 119, 0.1));
   border-color: #ec4899;
-  color: #db2777;
+  color: #be185d;
 }
 
 .social-links-clean {
@@ -1033,13 +1033,13 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(254, 253, 251, 0.95);
+  background: rgba(253, 252, 251, 0.95);
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
   z-index: 1000;
   padding: 1rem 0;
   border-bottom: 1px solid var(--border-color);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
   transition: all 0.3s ease;
 }
 
@@ -1074,7 +1074,7 @@ body {
 }
 
 .brand-surname-clean {
-  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -1106,7 +1106,7 @@ body {
   left: 0;
   width: 0;
   height: 2px;
-  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
   transition: width 0.3s ease;
 }
 
@@ -1120,7 +1120,7 @@ body {
 
 /* Active state for current section */
 .navbar-nav-clean li a.active {
-  color: #3b82f6;
+  color: #4f46e5;
 }
 
 .navbar-nav-clean li a.active::after {
