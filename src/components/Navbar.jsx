@@ -1,8 +1,10 @@
 
 import React, { useState } from 'react';
+import { useTheme } from '../contexts/ThemeContext';
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const { isDarkMode, toggleTheme } = useTheme();
 
   const handleMenuToggle = () => {
     setMenuOpen((prev) => !prev);
@@ -34,6 +36,15 @@ const Navbar = () => {
           <li><a href="#gallery" onClick={() => setMenuOpen(false)}>Gallery</a></li>
           <li><a href="#projects" onClick={() => setMenuOpen(false)}>Projects</a></li>
           <li><a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a></li>
+          <li>
+            <button 
+              className="theme-toggle-btn" 
+              onClick={toggleTheme}
+              aria-label="Toggle theme"
+            >
+              {isDarkMode ? '🌙' : '☀️'}
+            </button>
+          </li>
         </ul>
       </div>
     </nav>
