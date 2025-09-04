@@ -27,23 +27,23 @@
   --shadow-color: rgba(0, 0, 0, 0.4);
 }
 
-/* Light Mode Variables - Modern Warm Theme */
+/* Light Mode Variables - Nebula Purple Theme */
 .light {
-  --bg-primary: #fdfcfb;
-  --bg-secondary: #f9f7f4;
-  --bg-card: #ffffff;
-  --text-primary: #1e293b;
-  --text-secondary: #475569;
-  --text-muted: #64748b;
-  --accent-primary: #4f46e5;
-  --accent-secondary: #7c3aed;
-  --accent-tertiary: #06b6d4;
-  --border-color: #e2e8f0;
-  --hover-bg: #f8fafc;
-  --card-bg: #ffffff;
-  --darker-bg: #f1f5f9;
-  --input-bg: #ffffff;
-  --shadow-color: rgba(0, 0, 0, 0.08);
+  --bg-primary: #1a0d26;
+  --bg-secondary: #2d1b3d;
+  --bg-card: rgba(45, 27, 61, 0.6);
+  --text-primary: #e8d5ff;
+  --text-secondary: #c4a7e7;
+  --text-muted: #9c7fb8;
+  --accent-primary: #a855f7;
+  --accent-secondary: #c084fc;
+  --accent-tertiary: #f472b6;
+  --border-color: rgba(168, 85, 247, 0.2);
+  --hover-bg: rgba(45, 27, 61, 0.8);
+  --card-bg: rgba(45, 27, 61, 0.4);
+  --darker-bg: #0f051a;
+  --input-bg: rgba(45, 27, 61, 0.6);
+  --shadow-color: rgba(168, 85, 247, 0.3);
 }
 
 * {
@@ -145,7 +145,7 @@ body {
 /* Clean Hero Section */
 .hero-section-clean {
   min-height: 100vh;
-  background: linear-gradient(135deg, #fdfcfb 0%, #f9f7f4 30%, #f0f9ff 70%, #eff6ff 100%);
+  background: linear-gradient(135deg, #1a0d26 0%, #2d1b3d 30%, #3b2a5c 70%, #4c3575 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -344,21 +344,21 @@ body {
 }
 
 .skill-blue {
-  background: linear-gradient(45deg, rgba(79, 70, 229, 0.1), rgba(59, 130, 246, 0.1));
-  border-color: #4f46e5;
-  color: #3730a3;
+  background: linear-gradient(45deg, rgba(168, 85, 247, 0.2), rgba(192, 132, 252, 0.2));
+  border-color: #a855f7;
+  color: #e879f9;
 }
 
 .skill-purple {
-  background: linear-gradient(45deg, rgba(124, 58, 237, 0.1), rgba(139, 92, 246, 0.1));
-  border-color: #7c3aed;
-  color: #5b21b6;
+  background: linear-gradient(45deg, rgba(192, 132, 252, 0.2), rgba(244, 114, 182, 0.2));
+  border-color: #c084fc;
+  color: #f0abfc;
 }
 
 .skill-pink {
-  background: linear-gradient(45deg, rgba(236, 72, 153, 0.1), rgba(219, 39, 119, 0.1));
-  border-color: #ec4899;
-  color: #be185d;
+  background: linear-gradient(45deg, rgba(244, 114, 182, 0.2), rgba(251, 113, 133, 0.2));
+  border-color: #f472b6;
+  color: #fbbf24;
 }
 
 .social-links-clean {
@@ -383,11 +383,11 @@ body {
 }
 
 .social-link-clean:hover {
-  background: #3b82f6;
-  border-color: #3b82f6;
+  background: #a855f7;
+  border-color: #a855f7;
   color: white;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+  box-shadow: 0 4px 12px rgba(168, 85, 247, 0.4);
 }
 
 .hero-buttons-clean {
@@ -539,11 +539,11 @@ body {
 }
 
 .social-link-icon:hover {
-  background: #3b82f6;
-  border-color: #3b82f6;
+  background: #a855f7;
+  border-color: #a855f7;
   color: white;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+  box-shadow: 0 4px 12px rgba(168, 85, 247, 0.4);
 }
 
 .hero-buttons-centered {
@@ -1033,13 +1033,13 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(253, 252, 251, 0.95);
+  background: rgba(26, 13, 38, 0.95);
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
   z-index: 1000;
   padding: 1rem 0;
   border-bottom: 1px solid var(--border-color);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 20px rgba(168, 85, 247, 0.2);
   transition: all 0.3s ease;
 }
 
@@ -1074,7 +1074,7 @@ body {
 }
 
 .brand-surname-clean {
-  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+  background: linear-gradient(135deg, #a855f7 0%, #f472b6 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -1106,7 +1106,7 @@ body {
   left: 0;
   width: 0;
   height: 2px;
-  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+  background: linear-gradient(135deg, #a855f7 0%, #f472b6 100%);
   transition: width 0.3s ease;
 }
 
@@ -1120,7 +1120,7 @@ body {
 
 /* Active state for current section */
 .navbar-nav-clean li a.active {
-  color: #4f46e5;
+  color: #c084fc;
 }
 
 .navbar-nav-clean li a.active::after {
