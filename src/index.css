@@ -2737,16 +2737,29 @@ body {
 }
 
 .contact-form-card {
-  background: white;
-  border-radius: 16px;
-  padding: 2rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 50%, #f1f5f9 100%);
+  border-radius: 20px;
+  padding: 2.5rem;
+  box-shadow: 0 15px 40px rgba(15, 23, 42, 0.08);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-form-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #06b6d4 0%, #0ea5e9 25%, #3b82f6 50%, #6366f1 75%, #8b5cf6 100%);
 }
 
 .contact-form-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px rgba(15, 23, 42, 0.12);
 }
 
 .card-title {
@@ -3076,54 +3089,62 @@ body {
 .form-group-modern label {
   font-size: 0.9rem;
   font-weight: 600;
-  background: linear-gradient(135deg, #7c2d12 0%, #be185d 100%);
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .form-group-modern input,
 .form-group-modern textarea {
-  padding: 0.875rem 1rem;
-  border: 1px solid var(--border-color);
-  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
   font-size: 0.95rem;
-  color: var(--text-primary);
-  background: var(--input-bg);
+  color: #1e293b;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
   transition: all 0.3s ease;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 .form-group-modern input:focus,
 .form-group-modern textarea:focus {
   outline: none;
-  border-color: var(--accent-primary);
-  box-shadow: 0 0 0 3px rgba(var(--accent-primary), 0.1);
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1), inset 0 1px 3px rgba(0, 0, 0, 0.05);
+  background: #ffffff;
+  transform: translateY(-1px);
 }
 
 .form-group-modern input::placeholder,
 .form-group-modern textarea::placeholder {
-  color: rgba(168, 85, 247, 0.6);
+  color: #94a3b8;
+  font-style: italic;
 }
 
 .send-message-btn {
-  background: linear-gradient(135deg, #a855f7 0%, #f472b6 50%, #c084fc 100%);
+  background: linear-gradient(135deg, #1e40af 0%, #3b82f6 25%, #06b6d4 50%, #0ea5e9 75%, #0284c7 100%);
   color: white;
   border: none;
-  border-radius: 15px;
-  padding: 1rem 2rem;
+  border-radius: 16px;
+  padding: 1.25rem 2.5rem;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 700;
   cursor: pointer;
   transition: all 0.3s ease;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
-  margin-top: 1rem;
-  box-shadow: 0 4px 20px rgba(168, 85, 247, 0.3);
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+  box-shadow: 0 8px 25px rgba(30, 64, 175, 0.3);
   position: relative;
   overflow: hidden;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .send-message-btn::before {
@@ -3133,8 +3154,8 @@ body {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-  transition: left 0.5s ease;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.6s ease;
 }
 
 .send-message-btn:hover::before {
@@ -3142,32 +3163,67 @@ body {
 }
 
 .send-message-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 15px 40px rgba(168, 85, 247, 0.5);
-  background: linear-gradient(135deg, #9333ea 0%, #ec4899 50%, #a855f7 100%);
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 20px 50px rgba(30, 64, 175, 0.4);
+  background: linear-gradient(135deg, #1d4ed8 0%, #2563eb 25%, #0891b2 50%, #0284c7 75%, #0369a1 100%);
 }
 
-/* Dark Mode Form Labels and Button */
+.send-message-btn:active {
+  transform: translateY(-2px) scale(1.01);
+  box-shadow: 0 12px 30px rgba(30, 64, 175, 0.35);
+}
+
+/* Dark Mode Form Styling */
+.dark .contact-form-card {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.dark .contact-form-card::before {
+  background: linear-gradient(90deg, #06b6d4 0%, #3b82f6 25%, #6366f1 50%, #8b5cf6 75%, #d946ef 100%);
+}
+
+.dark .contact-form-card:hover {
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+}
+
 .dark .form-group-modern label {
-  background: linear-gradient(135deg, #e2e8f0 0%, #fbbf24 100%);
+  background: linear-gradient(135deg, #e2e8f0 0%, #06b6d4 50%, #3b82f6 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
+.dark .form-group-modern input,
+.dark .form-group-modern textarea {
+  background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+  border: 2px solid #475569;
+  color: #e2e8f0;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.dark .form-group-modern input:focus,
+.dark .form-group-modern textarea:focus {
+  border-color: #06b6d4;
+  box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.2), inset 0 1px 3px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, #334155 0%, #475569 100%);
+}
+
 .dark .form-group-modern input::placeholder,
 .dark .form-group-modern textarea::placeholder {
-  color: rgba(99, 102, 241, 0.6);
+  color: #94a3b8;
+  font-style: italic;
 }
 
 .dark .send-message-btn {
-  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #06b6d4 100%);
-  box-shadow: 0 4px 20px rgba(99, 102, 241, 0.3);
+  background: linear-gradient(135deg, #0f172a 0%, #1e40af 25%, #06b6d4 50%, #3b82f6 75%, #6366f1 100%);
+  box-shadow: 0 8px 25px rgba(6, 182, 212, 0.3);
 }
 
 .dark .send-message-btn:hover {
-  box-shadow: 0 15px 40px rgba(99, 102, 241, 0.5);
-  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #0891b2 100%);
+  box-shadow: 0 20px 50px rgba(6, 182, 212, 0.4);
+  background: linear-gradient(135deg, #1e293b 0%, #1d4ed8 25%, #0891b2 50%, #2563eb 75%, #4f46e5 100%);
 }
 
 /* Responsive Design for Modern Contact */
