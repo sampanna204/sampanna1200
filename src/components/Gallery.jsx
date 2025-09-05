@@ -129,15 +129,19 @@ const RollingGallery = ({
               }}
               className="flex min-h-[200px] cursor-grab items-center justify-center [transform-style:preserve-3d]"
             >
-              {images.map((url, i) => (
-                <div
-                  key={i}
-                  className="group absolute flex h-fit items-center justify-center p-[8%] [backface-visibility:hidden] md:p-[6%]"
-                  style={{
-                    width: `${faceWidth}px`,
-                    transform: `rotateY(${(360 / faceCount) * i}deg) translateZ(${radius}px)`,
-                  }}
-                >
+              {images.map((url, i) => {
+                const angle = (360 / faceCount) * i;
+                const zIndex = Math.round((Math.cos((angle * Math.PI) / 180) + 1) * 10);
+                return (
+                  <div
+                    key={i}
+                    className="group absolute flex h-fit items-center justify-center p-[8%] [backface-visibility:hidden] md:p-[6%]"
+                    style={{
+                      width: `${faceWidth}px`,
+                      transform: `rotateY(${angle}deg) translateZ(${radius}px)`,
+                      zIndex: zIndex,
+                    }}
+                  >
                   <img
                     src={url}
                     alt="gallery"
@@ -149,8 +153,9 @@ const RollingGallery = ({
                                lg:h-[360px] lg:w-[270px]
                                xl:h-[400px] xl:w-[300px]"
                   />
-                </div>
-              ))}
+                  </div>
+                );
+              })}
             </motion.div>
           </div>
         </div>

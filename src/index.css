@@ -4410,6 +4410,19 @@ body {
   min-height: 100vh;
   color: var(--text-primary);
   transition: background 0.3s ease;
+  overflow-x: hidden;
+}
+
+/* Fix for 3D gallery image positioning and overlapping */
+.gallery-section-carousel .group {
+  will-change: transform;
+  transform-style: preserve-3d;
+}
+
+.gallery-section-carousel .group img {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform-style: preserve-3d;
 }
 
 .dark .gallery-section-carousel {
