@@ -33,9 +33,9 @@ const RollingGallery = ({
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const cylinderWidth = isScreenSizeSm ? 2100 : 1800;
+  const cylinderWidth = isScreenSizeSm ? 2400 : 2100;
   const faceCount = images.length;
-  const faceWidth = (cylinderWidth / faceCount) * 1.8;
+  const faceWidth = (cylinderWidth / faceCount) * 1.5;
   const radius = cylinderWidth / (2 * Math.PI);
 
   const dragFactor = 0.05;
@@ -131,27 +131,33 @@ const RollingGallery = ({
             >
               {images.map((url, i) => {
                 const angle = (360 / faceCount) * i;
-                const zIndex = Math.round((Math.cos((angle * Math.PI) / 180) + 1) * 10);
+                const normalizedAngle = ((angle % 360) + 360) % 360;
+                const zIndex = Math.round(Math.cos((normalizedAngle * Math.PI) / 180) * 100);
                 return (
                   <div
                     key={i}
-                    className="group absolute flex h-fit items-center justify-center p-[8%] [backface-visibility:hidden] md:p-[6%]"
+                    className="group absolute flex h-fit items-center justify-center [backface-visibility:hidden]"
                     style={{
                       width: `${faceWidth}px`,
                       transform: `rotateY(${angle}deg) translateZ(${radius}px)`,
                       zIndex: zIndex,
+                      transformStyle: 'preserve-3d',
                     }}
                   >
                   <img
                     src={url}
-                    alt="gallery"
+                    alt={`gallery-${i}`}
                     className="pointer-events-none h-[280px] w-[210px] rounded-[15px] object-cover
-                               transition-transform duration-300 ease-out group-hover:scale-105
+                               transition-transform duration-300 ease-out group-hover:scale-105 shadow-lg
                                xs:h-[300px] xs:w-[225px]
                                sm:h-[360px] sm:w-[270px]
                                md:h-[420px] md:w-[315px]
                                lg:h-[480px] lg:w-[360px]
                                xl:h-[540px] xl:w-[405px]"
+                    style={{
+                      backfaceVisibility: 'hidden',
+                      WebkitBackfaceVisibility: 'hidden',
+                    }}
                   />
                   </div>
                 );

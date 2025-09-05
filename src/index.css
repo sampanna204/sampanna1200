@@ -4417,12 +4417,21 @@ body {
 .gallery-section-carousel .group {
   will-change: transform;
   transform-style: preserve-3d;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 .gallery-section-carousel .group img {
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   transform-style: preserve-3d;
+  isolation: isolate;
+}
+
+.gallery-section-carousel [style*="transform"] {
+  transform-style: preserve-3d !important;
+  backface-visibility: hidden !important;
+  -webkit-backface-visibility: hidden !important;
 }
 
 .dark .gallery-section-carousel {
