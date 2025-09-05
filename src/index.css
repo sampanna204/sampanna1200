@@ -1199,10 +1199,14 @@ body {
 .hamburger-bar {
   width: 28px;
   height: 3px;
-  background: #64748b;
-  margin: 2px 0;
+  background: var(--text-primary);
+  margin: 3px 0;
   border-radius: 2px;
   transition: all 0.3s ease;
+}
+
+.navbar-hamburger:hover .hamburger-bar {
+  background: var(--accent-primary);
 }
 
 /* Responsive Design for Clean Navbar */
@@ -1226,7 +1230,7 @@ body {
     left: -100%;
     right: 0;
     bottom: 0;
-    background: rgba(255, 255, 255, 0.98);
+    background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     flex-direction: column;
@@ -1234,14 +1238,21 @@ body {
     align-items: center;
     gap: 2rem;
     padding: 2rem;
-    box-shadow: 2px 0 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 2px 0 20px var(--shadow-color);
     transition: left 0.3s ease;
-    z-index: 1000;
+    z-index: 1001;
     width: 100%;
+    border-right: 1px solid var(--border-color);
   }
 
   .navbar-nav-clean.open {
     left: 0;
+  }
+
+  .navbar-nav-clean li {
+    list-style: none;
+    width: 100%;
+    text-align: center;
   }
 
   .navbar-nav-clean li a {
@@ -1249,10 +1260,16 @@ body {
     font-weight: 600;
     color: var(--text-primary);
     padding: 1rem 0;
+    display: block;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-radius: 8px;
   }
 
   .navbar-nav-clean li a:hover {
-    color: #3b82f6;
+    color: var(--accent-primary);
+    background: var(--hover-bg);
+    padding: 1rem 2rem;
   }
 
   .navbar-nav-clean li a::after {
@@ -1261,6 +1278,12 @@ body {
 
   .theme-toggle-btn {
     margin-top: 1rem;
+  }
+
+  /* Dark mode mobile menu */
+  .dark .navbar-nav-clean {
+    background: linear-gradient(135deg, #0a0e1a 0%, #141b2d 100%);
+    box-shadow: 2px 0 20px rgba(0, 0, 0, 0.5);
   }
 }
 
