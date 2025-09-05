@@ -1420,6 +1420,18 @@ body {
   padding: 1.5rem;
   border: 1px solid rgba(148, 163, 184, 0.1);
   transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.modern-skill-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(45deg, var(--primary-blue), var(--secondary-purple));
 }
 
 .modern-skill-card:hover {
@@ -4125,7 +4137,7 @@ body {
   }
 
   .profile-image {
-    height: 500px;
+    height: 520px;
   }
 
   .info-cards-grid {
