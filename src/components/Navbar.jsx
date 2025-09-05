@@ -7,7 +7,12 @@ const Navbar = () => {
   const { isDarkMode, toggleTheme } = useTheme();
 
   const handleMenuToggle = () => {
-    setMenuOpen((prev) => !prev);
+    setMenuOpen((prev) => {
+      const newState = !prev;
+      // Lock/unlock body scroll when menu opens/closes
+      document.body.classList.toggle('menu-open', newState);
+      return newState;
+    });
   };
 
   return (
@@ -30,12 +35,12 @@ const Navbar = () => {
         </button>
 
         <ul className={`navbar-nav-clean${menuOpen ? ' open' : ''}`}>
-          <li><a href="#home" onClick={() => setMenuOpen(false)}>Home</a></li>
-          <li><a href="#about" onClick={() => setMenuOpen(false)}>About</a></li>
-          <li><a href="#skills" onClick={() => setMenuOpen(false)}>Skills</a></li>
-          <li><a href="#gallery" onClick={() => setMenuOpen(false)}>Gallery</a></li>
-          <li><a href="#projects" onClick={() => setMenuOpen(false)}>Projects</a></li>
-          <li><a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a></li>
+          <li><a href="#home" onClick={() => { setMenuOpen(false); document.body.classList.remove('menu-open'); }}>Home</a></li>
+          <li><a href="#about" onClick={() => { setMenuOpen(false); document.body.classList.remove('menu-open'); }}>About</a></li>
+          <li><a href="#skills" onClick={() => { setMenuOpen(false); document.body.classList.remove('menu-open'); }}>Skills</a></li>
+          <li><a href="#gallery" onClick={() => { setMenuOpen(false); document.body.classList.remove('menu-open'); }}>Gallery</a></li>
+          <li><a href="#projects" onClick={() => { setMenuOpen(false); document.body.classList.remove('menu-open'); }}>Projects</a></li>
+          <li><a href="#contact" onClick={() => { setMenuOpen(false); document.body.classList.remove('menu-open'); }}>Contact</a></li>
           <li>
             <button 
               className="theme-toggle-btn" 
