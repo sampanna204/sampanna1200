@@ -5,6 +5,7 @@
   "description": "A modern, responsive portfolio website built with React, Vite, and Tailwind CSS.",
   "main": "eslint.config.js",
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@eslint/js": "^9.34.0",
     "@tailwindcss/postcss": "^4.1.12",
     "@vitejs/plugin-react": "^5.0.1",
